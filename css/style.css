@@ -1,3 +1,11 @@
+@media (max-width: 991px) {
+    header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+    }
+}
+
 body {
     background-color: #f3e5f4;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
