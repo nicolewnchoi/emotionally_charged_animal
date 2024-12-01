@@ -1,17 +1,266 @@
-@media (max-width: 991px) {
-    header {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        position: relative;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&family=Rubik:wght@300;400;500;600&display=swap');
+/*Fonts
+-Poppins
+-Rubik
+*/
+
+:root {
+    --primary-color: #ff523b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;
+
+    --white-color: #ffffff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c899a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
+
+    --font-small: 13px;
+    --font-smaller: 11px;
+
+    --percent100: 100%;
+    --percent50: 50%;
+
+    --fw3: 300;
+    --fw5: 500;
+    --fw6: 600;
+    --fw7: 700;
+    --fw8: 800;
+
+    --trans-background-color: background-color .3s color .3s;
+    --tans-background: background-color .3s;
+    --trans-color: color .3s;
+}
+
+/* Navigation */
+*{
+    margin: 0;
+    /* margin-top:0; */
+    /* margin-bottom:0; */
+    /* padding:0; */
+}
+
+*,::before,::after {
+    box-sizing: border-box;
 }
 
 body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: var(--percent100);
+    vertical-align: middle;
+}
+
+.logo {
+    max-width: 350px;
+    padding:30px;
+}
+strong {
+    font-weight: var(--fw8);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input::placeholder {
+    font: inherit;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: calc(1.3em + 1vw);
+    font-weight: var(--fw8);
+    line-height: 1;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: var(--fw7);
+}
+h4 {
+    font-size: 1em;
+    font-weight: var(--fw6);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0.938em;
+}
+
+.column {
+    margin-left: -0.938em;
+    margin-right: -0.938em;
+}
+
+.column .row {
+    padding: 0 0.938em;
+}
+
+.flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexitem {
+    display: flex;
+    align-items: center;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-links a:hover {
+    color: var(--secondary-color);
+}
+
+.second-links a:hover {
+    color: var(--light-text-color);
+}
+
+.icon-small, .icon-large {
+    display: flex;
+    align-items: center;
+    padding: 0 0.25em;
+    font-weight: normal;
+}
+.icon-small {
+    font-size: 1.25em;
+    margin: auto;
+}
+.icon-large {
+    font-size: 1.75em;
+    padding: 0 0.75em 0 0;
+}
+
+/*HEADER*/
+header {
+    background-color:#71DD80;
+}
+header li > a {
+    display: flex;
+    position: relative;
+    line-height: inherit;
+    transition: var(--trans-color);
+}
+
+/* .header-top, .wrapper {
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    justify-content: space-between;
+    line-height: 42px;
+} */
+
+.header-top {
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    justify-content: space-between;
+    line-height: 42px;
+}
+
+.wrapper {
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    justify-content: space-between;
+    line-height: 42px;
+}
+
+.header-top, .wrapper ul {
+    gap: 2em;
+}
+.header-top li {
+    position: relative;
+}
+.header-top ul ul {
+    position: absolute;
+    left: -1em;
+    right: -1em;
+    line-height: 2em;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+.header-nav .right {
+    position:relative;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0 2em;
+    }
+}
+
+/* .cart-item {
+    margin-bottom: 1rem;
+} */
+
+/* Banner */
+/* .banner-image {
+    background: url('img/banner.jpg') no-repeat center center / cover;
+    min-height: 600px;
+} */
+
+/* Feature Products Card */
+/*.card-title a {
+    color: #333; 
+    text-decoration: none; 
+} */
+
+/* Media queries for responsive adjustments
+@media (max-width: 768px) {
+    .banner-image {
+        min-height: 300px; /* Adjust banner image for smaller devices
+    }
+} */
+
+/* MY OLD CODE */
+/* body {
     background-color: #f3e5f4;
     font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 1.35rem;
-    padding: 0.5rem;
-    line-height: normal;
+}
+
+.header {
+    background-color: #e396e9;
+    max-width: 1350px;
+}
+
+nav {
+    background-color: #e396e9;
+    position: relative;
+    max-height: 400px;
 }
 
 nav ul li {
@@ -30,12 +279,11 @@ nav ul li {
 ul {
     display: grid;
     margin-top: 0.1rem;
-    margin-bottom: 10%;
 }
 
 .active {
     display: grid;
-    padding: 0.5rem;
+    padding: 0.6rem;
     background-color: #d42257;
     color: #ffffff;
 }
@@ -107,7 +355,6 @@ h1 {
     display: grid;
     margin: auto;
     justify-content: center;
-    border: 3px solid #3a00ff;
     color: #3a00ff;
     padding: 1rem;
     font-size: 6rem;
@@ -147,7 +394,7 @@ h3 {
     height: auto;
     padding: 0.5em;
 }
-/* Source: W3Schools: https: //www.w3schools.com/w3css/4/w3.css */
+
 .nav-button {
     border: none;
     display: inline-block;
@@ -174,7 +421,6 @@ h3 {
     right: 0%;
     transform: translate(0%, -50%);
 }
-/* End Source: W3Schools */
 
 @media screen and (min-width: 800px) {
     nav ul {
@@ -203,7 +449,6 @@ h3 {
         align-items: start;
     }
 
-    /*Source: https: //www.nieknijland.nl/blog/make-a-responsive-carousel-with-just-css*/
     .gallery {
         background-color: #f3e5f4;
         border: none;
@@ -241,7 +486,6 @@ h3 {
         height: 485px;
         object-fit: cover;
     }
-    /*End Source*/
 
     .center-image-food, .center-image-pet {
         display: grid;
@@ -256,7 +500,6 @@ h3 {
     }
 
     h2 {
-        /* justify-items: center; */
         margin-top: 5%;
     }
 
@@ -422,7 +665,6 @@ h3 {
         border: none;
         object-fit: cover;
         width: 90%;
-        /* height: 300px; */
     }
 
     .center-travel-image-hawaii, .center-travel-image-shanghai, .center-travel-image-vermont {
@@ -455,4 +697,4 @@ h3 {
         text-align: left;
         grid-row: 1/-1;
     }
-}
+} */
