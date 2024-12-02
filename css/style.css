@@ -159,7 +159,7 @@ h4 {
     margin: auto;
 }
 .icon-large {
-    font-size: 1.75em;
+    font-size: 2.3em;
     padding: 0 0.75em 0 0;
 }
 
@@ -195,9 +195,9 @@ header li > a {
     line-height: 42px;
 }
 
-.header-top, .wrapper ul {
+/* .header-top, .wrapper ul {
     gap: 2em;
-}
+} */
 .header-top li {
     position: relative;
 }
@@ -219,6 +219,75 @@ header li > a {
 @media screen and (min-width: 992px) {
     .container {
         padding: 0 2em;
+    }
+}
+
+/*BREADCRUMB*/
+.breadcrumb {
+    font-size: var(--font-small);
+    margin-bottom: 2em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    padding: 0 0.35em;
+}
+.breadcrumb li:last-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-text-color);
+}
+
+/*SINGLE IMAGE VIEW*/
+.products.one .item {
+    flex-direction: column;
+}
+.products.one :where(.big-image, .small-image) {
+    overflow: hidden;
+}
+.products.one .big-image {
+    position: relative;
+    margin-bottom: 1em;
+}
+.products.one :where(.big-image, .small-image) img {
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+.products.one .thumbnail-show {
+    position: relative;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 2em 2em 0;
+}
+
+/* @media screen and (min-width: 481px) {
+    .products.main .item {
+        flex: 0 0 50%;
+    }
+
+    .products.one .big-image {
+        margin-bottom: 2em;
+    }
+    .products.one .image-show {
+        height: 680px;
+    }
+    .products.one .thumbnail-show {
+        height: 160px;
+    }
+} */
+
+@media screen and (min-width: 768px) {
+    .products .price .current {
+        font-size: 1.25em;
+    }
+    .products.one .row {
+        flex: 0 0 50%;
+        width: 50%;
     }
 }
 
