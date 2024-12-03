@@ -5,7 +5,7 @@
 */
 
 :root {
-    --primary-color: #ff523b;
+    --primary-color: #71DD80;
     --secondary-color: #794afa;
     --secondary-dark-color: #453c5c;
 
@@ -14,8 +14,9 @@
     --light-text-color: #7c899a;
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
+    --background-color: #FAF0E7;
 
-    --font-small: 13px;
+    --font-small: 15px;
     --font-smaller: 11px;
 
     --percent100: 100%;
@@ -50,7 +51,7 @@ body {
     font-weight: 400;
     line-height: 1.4;
     color: var(--dark-color);
-    background-color: var(--white-color);
+    background-color: var(--background-color);
 }
 a {
     text-decoration: none;
@@ -139,15 +140,13 @@ h4 {
     flex-direction: column;
     gap: 1em;
 }
-
 .main-links a:hover {
-    color: var(--secondary-color);
+    color: var(--light-bg-color);
 }
 
 .second-links a:hover {
     color: var(--light-text-color);
 }
-
 .icon-small, .icon-large {
     display: flex;
     align-items: center;
@@ -161,6 +160,43 @@ h4 {
 .icon-large {
     font-size: 2.3em;
     padding: 0 0.75em 0 0;
+}
+/*BUTTONS*/
+.primary-button, .secondary-button, .light-button {
+    font-size: var(--font-small);
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    transition: var(--trans-background-color);
+}
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+.primary-button:hover {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.secondary-button {
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.secondary-button:hover {
+    background-color: var(--light-bg-color);
+    color: var(--secondary-dark-color);
+}
+.light-button {
+    background-color: var(--light-bg-color);
+}
+.light-button:hover {
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+.view-all {
+    font-size: var(--font-small);
+    display: flex;
+    gap: 1em;
+    transition: var(--trans-color);
 }
 
 /*HEADER*/
@@ -210,7 +246,6 @@ header li > a {
     border: 1px solid var(--border-color);
     z-index: 1;
 }
-
 .header-nav .right {
     position:relative;
     margin-left: auto;
@@ -281,12 +316,137 @@ header li > a {
 .products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
     background-color: var(--light-bg-color);
 }
-
 .product-gallery {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-}  
+}
+.products .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.products .rating .stars {
+    width: 80px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='rgba(240,187,64,1)'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z'%3E%3C/path%3E%3C/svg%3E");
+    background-position-y: top;
+    background-repeat: repeat-x;
+}
+.products.one .add-review {
+    color: var(--dark-color);
+}
+.products.one .price {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.products.one .price .current {
+    font-size: 2.5em;
+}
+.products .variant form {
+    display: flex;
+    margin-top: 0.5em;
+}
+.products .variant form p {
+    position: relative;
+    margin: 0 0.5em 0.5em;
+}
+.products :where(.variant, .actions) .circle {
+    display: block;
+    position: static;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+}
+.products .variant input {
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.products .actions {
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin-top: 2em;
+}
+.products .qty-control {
+    /* width: fit-content; */
+    min-width: 200px;
+    padding: 0.5em;
+    border: 1px solid var(--secondary-dark-color);
+    margin: 0 1em 2em 1em;
+}
+div.qty-control.flexitem  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products .actions :where(input, button) {
+    font-size: 1.25em;
+    outline: 0;
+    border: 0;
+}
+.products .actions input {
+    width: 50px;
+    text-align: center;
+    background-color: transparent;
+}
+.products .qty-control button::before {
+    background-color: transparent;
+}
+.products .actions .button-cart {
+    flex: 1;
+    margin: 1em;
+    min-width: 200px;
+}
+.products .actions .button-cart button {
+    width: var(--percent100);
+    cursor: pointer;
+}
+.types-title {
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+/* .single-product .variant form p input:checked + label {
+    background-color: transparent;
+    border: 2px solid var(--dark-color);
+    color: var(--white-color);
+} */
+.products .variant label::before {
+    opacity: 1;
+}
+.dog-icon img {
+    width: 80px;
+}
+/* .products .variant label[for="beagle"]::before {
+    background-image
+} */
+
+/*VARIANT LABELS*/
+.variant label {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.variant input[type="radio"]:checked + label {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+
+
+/*VERTICAL SLIDER CUSTOMIZATION*/
 .small-image {
     width: 100px; /* Adjust width for thumbnails */
     height: 100%; /* Make thumbnails fit */
