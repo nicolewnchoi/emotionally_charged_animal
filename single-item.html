@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <!-- <link rel="stylesheet" type="text/css" href="css/html5reset.css" /> -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div id="page" class="site">
+    <header>
+      <div class="header top">
+        <div class="continer">
+          <div class="wrapper flexitem">
+            <div class="left">
+              <ul class="flexitem main-links">
+                <li><a href="#"><div class="icon-large"><i class="i ri-menu-2-line"></i></div></a></li>
+                <li><a href="#"><div class="icon-large"><i class="i ri-user-line"></i></div></a></li>
+              </ul>
+            </div>
+            <img class="logo" src="img/THE-EMOTION-STORE.png" alt="Logo for The Emotion Store">
+            <div class="right">
+              <ul class="flexitem main-links">
+                  <li><a href="#"><div class="icon-large"><i class="ri-heart-line"></i></div></a></li>
+                  <li><a href="#"><div class="icon-large"><i class="ri-shopping-cart-line"></i></div></a></li>
+                  <li><a href="#"><div class="icon-large"><i class="ri-search-line"></i></div></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header -->
+    </header>
+    <!-- header -->
+    <main>
+        <div class="single-product">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="breadcrumb">
+                        <ul class="flexitem">
+                            <li><a href="#">Home</a></li>
+                            <li>Emotional Support Animal</li>
+                        </ul>
+                    </div>
+                    <!-- BREADCRUMB -->
+                    <div class="column">
+                        <div class="products one">
+                            <div class="flexwrap">
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="product-gallery">
+                                            <div class="small-image swiper">
+                                              <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                  <img src="img/beagle-front.jpg" alt="Front thumbnail">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                  <img src="img/beagle-side-view.jpg" alt="Side thumbnail">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                  <img src="img/beagle-inside.jpg" alt="Back thumbnail">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          
+                                            <div class="big-image swiper">
+                                              <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                  <a data-fslightbox href="img/beagle-front.jpg"><img src="img/beagle-front.jpg" alt="Front view"></a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                  <a data-fslightbox href="img/beagle-side-view.jpg"><img src="img/beagle-side-view.jpg" alt="Side view"></a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                  <a data-fslightbox href="img/beagle-inside.jpg"><img src="img/beagle-inside.jpg" alt="Back view"></a>
+                                                </div>
+                                              </div>
+                                              <div class="swiper-button-next"></div>
+                                              <div class="swiper-button-prev"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="item">
+                                        <h1>Emotional Support Animal</h1>
+                                        <div class="content">
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <a href="#" class="mini-text">2,251 reviews</a>
+                                                <a href="" class="add-review mini-text">Add Your Review</a>
+                                            </div>
+                                            <div class="price">
+                                                <span class="current">$59.99</span>
+                                            </div>
+                                            <div class="types">
+                                                <p class="types-title">Types</p>
+                                                <div class="variant">
+                                                    <form id="product-form">
+                                                        <p>
+                                                            <input 
+                                                                type="radio" 
+                                                                name="breed" 
+                                                                id="beagle" 
+                                                                value="Beagle" 
+                                                                data-images='["img/beagle-front.jpg", "img/beagle-side-view.jpg", "img/beagle-inside.jpg"]'>
+                                                            <label for="beagle" class="dog-icon">
+                                                                <img src="img/beagle-front.jpg" alt="Beagle Thumbnail">
+                                                                Beagle
+                                                            </label>
+                                                        </p>
+                                                        <p>
+                                                            <input 
+                                                                type="radio" 
+                                                                name="breed" 
+                                                                id="labradoodle" 
+                                                                value="Labradoodle" 
+                                                                data-images='["img/labradoodle-front.jpg", "img/labradoodle-side.jpg", "img/labradoodle-back.jpg"]'>
+                                                            <label for="labradoodle" class="dog-icon">Labradoodle</label>
+                                                        </p>
+                                                        <p>
+                                                            <input 
+                                                                type="radio" 
+                                                                name="breed" 
+                                                                id="dalmatian" 
+                                                                value="Dalmatian" 
+                                                                data-images='["img/dalmatian-front.jpg", "img/dalmatian-side.jpg", "img/dalmatian-back.jpg"]'>
+                                                            <label for="dalmatian" class="dog-icon">Dalmatian</label>
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                            </div>                                            
+                                            <div class="actions">
+                                                <div class="qty-control flexitem">
+                                                    <button class="minus circle">-</button>
+                                                    <input type="text" value="1">
+                                                    <button class="plus circle">+</button>
+                                                </div>
+                                                <div class="button-cart"><button class="primary-button">Add to cart</button></div>
+                                                <div class="button-cart"><button class="primary-button">Wishlist</button></div>
+                                                <!-- <div class="wish-share">
+                                                    <ul class="flexitem second-links">
+                                                        <li><a href="#">
+                                                            <span class="icon-large"><i class="ri-heart-line"></i></span>
+                                                            <span>Wishlist</span>
+                                                        </a></li>
+                                                    </ul>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+    <footer></footer>
+    <!-- footer -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+</body>
+</html>
+
