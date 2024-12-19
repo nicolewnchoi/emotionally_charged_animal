@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var productThumb = new Swiper('.small-image', {
         loop: true,
         spaceBetween: 10,
-        slidesPerView: 3,
+        slidesPerView: 5,
         freeMode: true,
         watchSlidesProgress: true,
     });
@@ -62,4 +62,21 @@ document.addEventListener('DOMContentLoaded', function () {
             refreshFsLightbox();
         }
     });
+
+    const submenu = document.querySelectorAll('.has-child .icon-small');
+    submenu.forEach((menu)=>menu.addEventListener('click', toggle));
+
+    function toggle(e) {
+        e.preventDefault();
+        submenu.forEach((item) => item != this ? item.closest('.has-child').classList.remove('expand') : null);
+        if (this.closest('.has-child').classList != 'expand');
+        this.closest('.has-child').classList.toggle('expand');
+    }
 });
+
+// // Prevent sticky element from scrolling to .rating-and-reviews
+// document.querySelector('.sticky-element').addEventListener('click', function(e) {
+//     if (e.target.matches('.rating-and-reviews')) {
+//         e.preventDefault(); // Stop the scroll behavior
+//     }
+// });
