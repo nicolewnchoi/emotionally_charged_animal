@@ -63,12 +63,7 @@ ul {
     list-style: none;
 }
 
-img {
-    /* max-width: var(--percent100); */
-    vertical-align: middle;
-}
-
-.logo {
+.logo-header {
     max-width: 350px;
     padding:30px;
 }
@@ -94,6 +89,7 @@ h1 {
 }
 h2 {
     font-size: 2.5em;
+    margin-bottom: 15px;
 }
 h3 {
     font-size: 1.2em;
@@ -141,12 +137,6 @@ h4 {
     flex-wrap: wrap;
 }
 
-/* .flexwrap::before, .flexwrap::after {
-    content: '';
-    display: table;
-    clear: both;
-} */
-
 .flexcenter {
     display: flex;
     align-items: center;
@@ -184,6 +174,292 @@ h4 {
     font-size: 2.3em;
     padding: 0 0.75em 0 0;
 }
+/*MAIN PAGE*/
+.object-cover img {
+    width: 100%;
+    display: block;
+    position: relative; /* Ensures it is part of the stacking context */
+    z-index: 1;
+    /* width: calc(500px - (300px + 2em)); */
+}
+
+.text-content img {
+    width: 200%;
+}
+
+.slider .container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* NEW STUFF */
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image scales nicely */
+    display: block; /* Removes gaps */
+}
+
+.text-content img.logo-title {
+    width: 200; /* Adjust size of logo */
+    margin: 10px; /* Centers the logo */
+    display: block;
+}
+
+.slider .item {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below slider */
+}
+/* NEW STUFF */
+
+/* .slider .item {
+    position: relative;
+} */
+
+.slider .text-content {
+    position: absolute; /* Allows positioning over the image */
+    top: 15%; /* Center vertically */
+    left: 45%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    z-index: 10; /* Ensures it appears above the image */
+    display: flex; /* Enables alignment for child elements */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements inside */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text content */
+}
+
+.slider .text-content .flexcol {
+    left: 30%; /* Center horizontally */
+}
+
+.slider .logo-title {
+    max-width: 150%;
+    /* top: 100px; */
+}
+
+.text-content h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.other-stuff {
+    position: absolute; /* Allows positioning over the image */
+    top: 40%; 
+    left: 4%;
+    z-index: 10;
+}
+
+.text-content .primary-button {
+    margin-top: 50px;
+    size: 120%;
+}
+
+/* .slider .text-content {
+    position: relative;
+    height: var(--percent100);
+    justify-content: flex-end;
+} */
+
+.about-us {
+    display: flex;
+    justify-content: center; /* Centers the entire section horizontally */
+    align-items: center; /* Aligns image and text vertically */
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    padding: 20px;
+    background-color: var(--primary-color); /* Background color */
+    gap: 20px; /* Add space between the image and text */
+}
+
+.about-us .content {
+    display: flex;
+    flex-direction: row; /* Places image and text side by side */
+    align-items: center;
+    max-width: 100%; /* Ensures the content doesn't overflow */
+    gap: 20px; /* Space between the image and the text */
+}
+
+.about-us .owner-dog-about img {
+    width: 500px; /* Set consistent width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-us .owner-dog-info {
+    max-width: 800px; /* Restrict the text width */
+    text-align: left; /* Align text to the left */
+}
+
+.about-us h2 {
+    font-size: 2rem; /* Adjust heading size */
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 1em;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Features Section*/
+.features {
+    padding: 40px 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    text-align: center;
+    flex: 1 1 22%; /* Four items per row */
+    max-width: 250px;
+    padding: 10px;
+}
+
+.feature .feature-large {
+    display: flex;
+    align-items: center;
+    width: 60px; /* Icon size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature .icon-large {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 0 0;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f9f5f1; /* Matches background for continuity */
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.testimonial {
+    flex: 1 1 30%; /* Three blocks per row */
+    max-width: 300px;
+    background-color: #fff; /* White background for each block */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for aesthetics */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.testimonials .stars {
+    color: var(--primary-color);
+}
+
+.review-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-form .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.review-form .date {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: #ffcc00; /* Star color */
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+ul.review {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Testimonials Section */
+/* .testimonials {
+    padding: 40px 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    flex: 1 1 30%; 
+    max-width: 300px;
+    background-color: #ddd; 
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.testimonial .placeholder {
+    width: 80%;
+    height: 80%;
+    background-color: #ccc; 
+    border-radius: 5px;
+} */
+
 /*BUTTONS*/
 .primary-button, .secondary-button, .light-button {
     font-size: var(--font-small);
@@ -463,9 +739,11 @@ div.qty-control.flexitem  {
 .products .variant label::before {
     opacity: 1;
 }
+/*DON'T TOUCH THIS*/
 .dog-icon img {
     width: 80px;
 }
+
 /* .products .variant label[for="beagle"]::before {
     background-image
 */
